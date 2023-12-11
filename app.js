@@ -17,6 +17,17 @@ await app.get('/drive/:name', async (req, res) =>  {
   res.send(`URL: ${url} `);
 });
 
+app.get('/prova', (req, res) =>  {
+  // Retrieve the parameter from the URL
+  res.send(`PROVA `);
+});
+
+
+app.get('/', (req, res) =>  {
+  // Retrieve the parameter from the URL
+  res.send(`HOME `);
+});
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
